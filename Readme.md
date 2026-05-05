@@ -1,6 +1,9 @@
 # 🚀 DevOps Dummy Project
 
-A full-stack microservices application built to learn and demonstrate DevOps practices.
+A full-stack application built with 
+microservices principles — independently 
+deployable frontend and backend services,
+each containerised with Docker. built to learn and demonstrate DevOps practices.
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
