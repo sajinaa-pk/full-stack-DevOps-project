@@ -154,14 +154,6 @@ kubectl get pods
 
 ---
 
-## 📚 What I Learned
-
-- ✅ How containers work (namespaces + cgroups)
-- ✅ Docker — images, containers, Dockerfile, multi-stage builds
-- ✅ Microservices architecture vs monolithic
-- ✅ Kubernetes — pods, deployments, services, autoscaling
-- ✅ CI/CD pipelines with GitHub Actions
-- ✅ Production DevOps practices
 
 ---
 
@@ -180,8 +172,7 @@ kubectl get pods
 ## 👩‍💻 Author
 
 **Sajina PK**
-- Learning DevOps from scratch
-- Built this in one evening! 🌙
+
 
 ---
 
