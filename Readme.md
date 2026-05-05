@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # 🚀 DevOps Dummy Project
 
 A full-stack microservices application built to learn and demonstrate DevOps practices.
@@ -13,7 +12,7 @@ A full-stack microservices application built to learn and demonstrate DevOps pra
 
 ## 📌 Project Overview
 
-This project demonstrates a complete DevOps workflow:
+A full-stack Todo application built with microservices architecture to demonstrate real-world DevOps practices including containerisation, orchestration, and automated deployment pipelines.
 Developer pushes code
 ↓
 GitHub Actions triggers automatically
@@ -35,14 +34,14 @@ App live! 🎉
 ▼
 ┌─────────────────────────────────────┐
 │         FRONTEND SERVICE            │
-│      Vue.js + Nginx + Docker        │
+│      Vue.js 3 + Nginx + Docker      │
 │           port: 3000                │
 └──────────────┬──────────────────────┘
 │ HTTP requests
 ▼
 ┌─────────────────────────────────────┐
 │          BACKEND SERVICE            │
-│       FastAPI + Python + Docker     │
+│     FastAPI + Python + Docker       │
 │           port: 8000                │
 └─────────────────────────────────────┘
 
@@ -51,7 +50,7 @@ App live! 🎉
 ## 🛠 Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
+|-------|------------|
 | Frontend | Vue.js 3 |
 | Backend | FastAPI (Python) |
 | Containerisation | Docker |
@@ -64,15 +63,15 @@ App live! 🎉
 ## 📁 Project Structure
 devops-dummy-project/
 ├── backend/
-│   ├── main.py          ← FastAPI app
-│   ├── requirements.txt ← Python dependencies
-│   └── Dockerfile       ← Backend container
+│   ├── main.py             ← FastAPI app
+│   ├── requirements.txt    ← Python dependencies
+│   └── Dockerfile          ← Backend container
 │
 ├── frontend/
 │   ├── src/
-│   │   └── App.vue      ← Vue todo app
+│   │   └── App.vue         ← Vue todo app
 │   ├── package.json
-│   └── Dockerfile       ← Frontend container
+│   └── Dockerfile          ← Frontend container
 │
 └── README.md
 
@@ -82,8 +81,7 @@ devops-dummy-project/
 
 ### Prerequisites
 - Docker installed
-- Node.js 20+
-- Python 3.10+
+- Git
 
 ### Run with Docker
 
@@ -96,15 +94,15 @@ docker run -d -p 8000:8000 --name todo-backend backend:v1
 
 **Frontend:**
 ```bash
-cd frontend/frontend-app
+cd frontend
 docker build -t frontend:v1 .
 docker run -d -p 3000:80 --name todo-frontend frontend:v1
 ```
 
 **Open browser:**
-Frontend → http://localhost:3000
-Backend  → http://localhost:8000
-API Docs → http://localhost:8000/docs
+Frontend  → http://localhost:3000
+Backend   → http://localhost:8000
+API Docs  → http://localhost:8000/docs
 
 ---
 
@@ -123,7 +121,6 @@ Push to main branch
 ↓
 GitHub Actions triggers
 ↓
-✅ Install dependencies
 ✅ Build Vue app
 ✅ Build Docker image
 ✅ Deploy to server
@@ -146,6 +143,10 @@ kubectl scale deployment myapp --replicas=3
 
 # Check pods
 kubectl get pods
+
+# Watch self healing — delete a pod and watch it recover!
+kubectl delete pod <pod-name>
+kubectl get pods
 ```
 
 ---
@@ -161,6 +162,18 @@ kubectl get pods
 
 ---
 
+## 🗺 Roadmap
+
+- [x] FastAPI backend
+- [x] Vue.js frontend
+- [x] Docker containerisation
+- [ ] Docker Compose
+- [ ] GitHub Actions pipeline
+- [ ] Kubernetes deployment files
+- [ ] Auto deploy to VM
+
+---
+
 ## 👩‍💻 Author
 
 **Sajina PK**
@@ -171,4 +184,3 @@ kubectl get pods
 
 ## 📄 License
 MIT
-EOF
